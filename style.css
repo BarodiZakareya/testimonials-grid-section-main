@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+*{
+margin:0;
+padding: 0;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    background-color: var(--color);
+}
+
+/* this for colors on the style */
+:root {
+    --box1-color: #7541c8;
+    --box2-color: #48556a;
+    --box3-color: #ffffff;
+    --box4-color: #19212e;
+    
+    --box5-color: #cfcfcf;
+    /* this for layout of the body */
+    
+    --color: #ecf2f8;
+
+}
+
+main{
+    padding: 14% 5%;
+}
+
+.grid-item{
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(0,0,0,0.10); ;
+}
+
+ #symbol{
+    position: absolute;
+    z-index: -1;
+    right: 20%;
+    top:0%;
+    opacity: 80%;
+    color: white;
+}
+
+#testimonials-1{
+    background-color: var(--box1-color);
+    color: var(--box3-color);
+    border-radius:  5px;
+    position: relative;
+    z-index: 1;
+}
+
+
+#testimonials-2{
+    background-color: var(--box2-color);
+    color: var(--box3-color);
+    border-radius:  5px;
+}
+
+
+#testimonials-3{
+    background-color: var(--box3-color);
+    color: var(--box4-color);
+    border-radius:  5px;
+}
+
+
+#testimonials-4{
+    background-color: var(--box4-color);
+    color: var(--box3-color);
+    border-radius:  5px;
+    
+}
+
+
+#testimonials-5{
+    background-color: var(--box5-color);
+    border-radius:  5px;
+    
+}
+
+/* this is for header profile design */
+.header {
+    display: flex;
+    align-items: center;
+}
+.header img {
+    border-radius: 30px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.header-text p{
+    color: var(--box5-color);
+    font-size: 7.2px;
+}
+/* this is for paragraph style on the page  */
+.grid-item > p {
+    margin-top: 20px;
+    opacity: 70%;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+
+/* This for responsive Design mobile first design */
+/* small desktop 576px*/
+@media (width >= 576px) {
+   main {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1440px;
+    margin: 0 auto;
+   }
+   #testimonials-5 {
+    flex-basis: 24%;
+   }
+
+   #main-left {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 72%;
+   }
+  
+   #bottom,#top{
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-between;
+    }
+   
+
+
+
+    #testimonials-2,#testimonials-3{
+    flex-basis:24% ;
+    }
+
+    #testimonials-4,#testimonials-1{
+    
+        flex-basis:73% ;
+    }
+
+
+
+
+}
+
